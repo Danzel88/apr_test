@@ -19,6 +19,5 @@ def get_session() -> Session:
         session.close()
 
 
-# es = AsyncElasticsearch(f"http://{setting.es_user}:{setting.es_password}@localhost:9200/")
 es = AsyncElasticsearch(f"http://localhost:9200")
 
