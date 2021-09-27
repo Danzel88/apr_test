@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "apr_test"
+version = "0.1.0"
+description = ""
+authors = ["Danzel88 <gecnepago@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+psycopg2-binary = "^2.9.1"
+elasticsearch = "^7.13.3"
+pandas = "^1.3.0"
+aiohttp = "^3.7.4"
+requests = "^2.25.1"
+fastapi = "^0.68.0"
+uvicorn = "^0.14.0"
+pydantic = "^1.8.2"
+SQLAlchemy = "^1.4.22"
+python-multipart = "^0.0.5"
+python-dotenv = "^0.19.0"
+aiofiles = "^0.7.0"
+Jinja2 = "^3.0.1"
+httpx = "^0.19.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
