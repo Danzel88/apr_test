@@ -14,3 +14,6 @@ Elasticsearch тоже установлен и нет каких то специ
     poetry install && poetry shell
 - запускаем питонячий скрипт (читаем csv и пишем в БД)
     python write_in_db.py
+- переходим в каталог src и запускаем модуль search
+    cd src && python -m search
+- по адресу http://127.0.0.1:5555 откроется станица с полями поиска и удаления постов
