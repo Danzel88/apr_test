@@ -1,3 +1,4 @@
+import os
 import asyncio
 
 import httpx
@@ -5,8 +6,8 @@ import pandas as pd
 import psycopg2
 
 
-# MAIN_URL = f"http://elastic:332199@localhost:9200/apr_search/all_req/"
 MAIN_URL = f"http://localhost:9200/apr_search/all_req/"
+USER = os.getlogin()
 
 data = pd.read_csv('posts.csv')
 df = pd.DataFrame(data, columns=['text', 'created_date', 'rubrics'])
@@ -26,7 +27,7 @@ async def write_in_es(dataframe):
 
 async def write_in_postgres(dataframe):
     print("Start writing in Postgres")
-    conn = psycopg2.connect("dbname=apr_test user=den")
+    conn = psycopg2.connect(f"dbname=apr_test user={USER}")
 
     with conn:
         with conn.cursor() as curs:
