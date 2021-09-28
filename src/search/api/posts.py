@@ -7,7 +7,7 @@ from search.models.posts import BasePosts
 from search.services.posts import PostsService
 
 router = APIRouter(prefix='')
-templates = Jinja2Templates(directory='templates')
+templates = Jinja2Templates(directory='../templates')
 
 
 @router.get('/', response_class=HTMLResponse)
